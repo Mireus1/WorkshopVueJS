@@ -17,14 +17,20 @@ const state = {
 const getters = {
     CAT_API_DATA: state => {
         return state.catsApi.data
+    },
+    FETCH_API_DATA: state => {
+        return state.catsApi.fetch
     }
 }
 
 const actions = {
     async fetchCatImages ({ commit }) {
         commit('SET_CATS_API_DATA_FETCH_IN_PROGRESS')
-        axios.defaults.headers.common['x-api-key'] = SECRET_KEY
-        let response = await axios.get('https://api.thecatapi.com/v1/images/search')
+        let response = await axios.get('https://api.thecatapi.com/v1/images/search' , {
+            headers: {
+                "x-api-key": SECRET_KEY,
+            }
+        })
         if (response.status === 200) {
             commit('SET_CATS_API_DATA_FETCH_SUCCESS', response.data)
           } else {

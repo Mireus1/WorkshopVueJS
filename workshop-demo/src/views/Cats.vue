@@ -1,6 +1,10 @@
 <template>
   <v-container pt-16>
-    <v-row>
+    <v-btn color="primary" @click="fetchCatsPhotosData">
+      <v-icon left> mdi-cat </v-icon>
+      Get a cat !
+    </v-btn>
+    <v-row v-if="getFetchStatus.success">
       <v-col align="center">
         <v-card max-width="600px" elevation="24">
           <v-img :src="getCatsPhotosUrl[0].url"></v-img>
@@ -24,9 +28,9 @@ export default {
     getCatsPhotosUrl() {
       return this.$store.getters.CAT_API_DATA;
     },
-  },
-  mounted() {
-    this.fetchCatsPhotosData();
+    getFetchStatus() {
+      return this.$store.getters.FETCH_API_DATA
+    }
   },
 };
 </script>

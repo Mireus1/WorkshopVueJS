@@ -53,9 +53,9 @@
   export default {
     data: () => ({
       items: [
-        {title: 'DOGS', to: '/'},
+        {title: 'HOME', to : '/'},
+        {title: 'DOGS', to: '/dogs'},
         {title: 'CATS', to: '/cats'},
-        {title: 'Profile', to : '/'},
         {title: 'Updates', to : '/'},
       ],
     }),

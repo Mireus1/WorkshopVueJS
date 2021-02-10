@@ -21,7 +21,7 @@ const getters = {
 const actions = {
     async fetchDogPhotos ({ commit }) {
         commit('SET_DOGS_API_DATA_FETCH_IN_PROGRESS')
-        const response = await axios.get('https://dog.ceo/api/breeds/image/random/7')
+        const response = await axios.get('https://dog.ceo/api/breeds/image/random/10')
         if (response.status === 200) {
             commit('SET_DOGS_API_DATA_FETCH_SUCCESS', response.data)
         } else {
