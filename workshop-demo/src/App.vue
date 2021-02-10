@@ -5,11 +5,6 @@
       color="white"
       flat
     >
-      <v-avatar
-        :color="$vuetify.breakpoint.smAndDown ? 'grey darken-1' : 'transparent'"
-        size="32"
-      ></v-avatar>
-
       <v-tabs
         centered
         class="ml-n9"
@@ -46,11 +41,14 @@
       </v-container>
       <router-view></router-view>
     </v-main>
+    <toto class="mt-16"></toto>
   </v-app>
 </template>
 
 <script>
+import toto from './components/toto.vue'
   export default {
+  components: { toto },
     data: () => ({
       items: [
         {title: 'HOME', to : '/'},
