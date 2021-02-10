@@ -56,7 +56,6 @@
         {title: 'HOME', to : '/'},
         {title: 'DOGS', to: '/dogs'},
         {title: 'CATS', to: '/cats'},
-        {title: 'Updates', to : '/'},
       ],
     }),
   }

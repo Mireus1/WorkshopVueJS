@@ -1,6 +1,6 @@
 <template>
   <v-container pt-16>
-    <v-btn color="primary" @click="fetchCatsPhotosData">
+    <v-btn color="secondary" @click="fetchCatsPhotosData">
       <v-icon left> mdi-cat </v-icon>
       Get a cat !
     </v-btn>
